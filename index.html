@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spazzio Logos | Clínica Médica em Alagoinhas - BA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            spazzioBlue: '#0F4C81',
+            spazzioNavy: '#0A2E4D',
+            spazzioGold: '#D98A1C',
+            spazzioSand: '#F7F9FC',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-spazzioSand text-slate-800 antialiased selection:bg-spazzioBlue selection:text-white">
+
+  <!-- Banner discreto de demonstração da Atlas Web -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center border-b border-slate-800">
+    Prévia conceitual criada por <span class="font-semibold text-cyan-400">Atlas Web</span> para avaliação de layout e fluxo de agendamento.
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#inicio" class="flex items-center gap-3 min-w-0">
+        <img
+          src="logo-spazzio.jpg"
+          alt="Spazzio Logos"
+          onerror="this.style.display='none'; document.getElementById('logo-fallback').classList.remove('hidden');"
+          class="w-10 h-10 rounded-full object-cover border border-slate-200 shrink-0"
+        />
+        <div id="logo-fallback" class="hidden w-10 h-10 rounded-full bg-spazzioBlue text-white font-display font-bold flex items-center justify-center shrink-0">
+          SL
+        </div>
+        <div class="truncate">
+          <span class="font-display font-bold text-spazzioNavy text-base sm:text-lg block leading-tight truncate">
+            Spazzio Logos
+          </span>
+          <span class="text-[11px] font-medium text-slate-500 block truncate">
+            Saúde, Psicologia &amp; Cuidado Familiar
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#especialidades" class="hover:text-spazzioBlue transition">Especialidades</a>
+        <a href="#estrutura" class="hover:text-spazzioBlue transition">A Clínica</a>
+        <a href="#localizacao" class="hover:text-spazzioBlue transition">Localização</a>
+      </nav>
+
+      <a
+        href="https://wa.me/5575981553588?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20na%20Spazzio%20Logos."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-spazzioBlue hover:bg-spazzioNavy text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full transition shadow-sm shrink-0"
+      >
+        <span>Agendar Consulta</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-white via-spazzioSand to-sky-50/70 pt-12 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-200/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-800 border border-amber-200/80 text-xs font-semibold px-3.5 py-1.5 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-spazzioGold"></span>
+          <span>9 anos cuidando da saúde da sua família em Alagoinhas</span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-5xl font-bold text-spazzioNavy tracking-tight leading-[1.12]">
+          Acolhimento humano e cuidado integral em um só lugar.
+        </h1>
+
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+          Na <strong>Spazzio Logos</strong>, cada paciente é atendido com escuta atenta, clareza e profissionais dedicados à saúde física e emocional de crianças, mulheres, adultos e famílias.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Avaliação Geral')"
+            class="inline-flex items-center justify-center gap-2 bg-spazzioBlue hover:bg-spazzioNavy text-white font-semibold px-6 py-3.5 rounded-xl transition shadow-md shadow-sky-900/10 cursor-pointer"
+          >
+            <span>Agendar pelo WhatsApp</span>
+          </button>
+          <a
+            href="#especialidades"
+            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-spazzioNavy font-semibold px-6 py-3.5 rounded-xl border border-slate-200 transition"
+          >
+            <span>Ver Especialidades</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200/80 max-w-xl">
+          <div>
+            <p class="font-display text-xl sm:text-2xl font-bold text-spazzioNavy">+9 anos</p>
+            <p class="text-xs text-slate-500">De trajetória em Alagoinhas</p>
+          </div>
+          <div>
+            <p class="font-display text-xl sm:text-2xl font-bold text-spazzioNavy">Multidisciplinar</p>
+            <p class="text-xs text-slate-500">Saúde e bem-estar integrados</p>
+          </div>
+          <div>
+            <p class="font-display text-xl sm:text-2xl font-bold text-spazzioNavy">Rápido</p>
+            <p class="text-xs text-slate-500">Marcação direta no WhatsApp</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cartão interativo de agendamento rápido -->
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-xl shadow-slate-900/5">
+          <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-spazzioGold">Marcação Rápida</span>
+              <h2 class="font-display text-xl font-bold text-spazzioNavy mt-0.5">Reserve seu horário</h2>
+            </div>
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">
+              Atendimento ativo
+            </span>
+          </div>
+
+          <form id="form-rapido" class="space-y-4" onsubmit="enviarWhatsAppForm(event)">
+            <div>
+              <label for="nome-paciente" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                Nome do paciente
+              </label>
+              <input
+                id="nome-paciente"
+                type="text"
+                required
+                placeholder="Ex.: Mariana Souza"
+                class="w-full rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-spazzioBlue"
+              />
+            </div>
+
+            <div>
+              <label for="especialidade-select" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                Especialidade desejada
+              </label>
+              <select
+                id="especialidade-select"
+                class="w-full rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm text-slate-800 bg-white focus:outline-none focus:border-spazzioBlue"
+              >
+                <option value="Pediatria">Pediatria</option>
+                <option value="Psiquiatria">Psiquiatria</option>
+                <option value="Ginecologia">Ginecologia</option>
+                <option value="Psicologia">Psicologia</option>
+                <option value="Avaliação / Saúde e Estética">Avaliação / Saúde &amp; Estética</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="turno-select" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                Preferência de turno
+              </label>
+              <select
+                id="turno-select"
+                class="w-full rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm text-slate-800 bg-white focus:outline-none focus:border-spazzioBlue"
+              >
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="A combinar">A combinar conforme agenda</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-spazzioBlue hover:bg-spazzioNavy text-white font-semibold py-3 rounded-xl transition text-sm cursor-pointer"
+            >
+              Solicitar Horário no WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especialidades -->
+  <section id="especialidades" class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-spazzioBlue">Áreas de Cuidado</span>
+        <h2 class="font-display text-2xl sm:text-4xl font-bold text-spazzioNavy mt-1">
+          Especialidades pensadas para cada fase
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Escolha a área de atendimento para conferir os detalhes e iniciar o agendamento direto com a recepção.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-spazzioBlue/40 transition flex flex-col justify-between">
+          <div>
+            <span class="inline-block text-xs font-semibold text-spazzioBlue bg-sky-50 px-3 py-1 rounded-full mb-4">
+              Infância &amp; Família
+            </span>
+            <h3 class="font-display text-xl font-bold text-spazzioNavy">Pediatria</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Acompanhamento do crescimento, desenvolvimento e saúde infantil com atenção acolhedora para os pais e responsáveis.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Pediatria')"
+            class="mt-6 text-sm font-semibold text-spazzioBlue hover:text-spazzioNavy inline-flex items-center gap-1 cursor-pointer"
+          >
+            <span>Agendar Pediatria →</span>
+          </button>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-spazzioBlue/40 transition flex flex-col justify-between">
+          <div>
+            <span class="inline-block text-xs font-semibold text-spazzioBlue bg-sky-50 px-3 py-1 rounded-full mb-4">
+              Saúde Emocional
+            </span>
+            <h3 class="font-display text-xl font-bold text-spazzioNavy">Psiquiatria</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Avaliação clínica, diagnóstico e acompanhamento médico focado em equilíbrio emocional, sono, ansiedade e qualidade de vida.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Psiquiatria')"
+            class="mt-6 text-sm font-semibold text-spazzioBlue hover:text-spazzioNavy inline-flex items-center gap-1 cursor-pointer"
+          >
+            <span>Agendar Psiquiatria →</span>
+          </button>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-spazzioBlue/40 transition flex flex-col justify-between">
+          <div>
+            <span class="inline-block text-xs font-semibold text-spazzioBlue bg-sky-50 px-3 py-1 rounded-full mb-4">
+              Saúde da Mulher
+            </span>
+            <h3 class="font-display text-xl font-bold text-spazzioNavy">Ginecologia</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Consultas preventivas, orientação clínica e acompanhamento integral da saúde feminina em todas as fases da vida.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Ginecologia')"
+            class="mt-6 text-sm font-semibold text-spazzioBlue hover:text-spazzioNavy inline-flex items-center gap-1 cursor-pointer"
+          >
+            <span>Agendar Ginecologia →</span>
+          </button>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-spazzioBlue/40 transition flex flex-col justify-between">
+          <div>
+            <span class="inline-block text-xs font-semibold text-spazzioBlue bg-sky-50 px-3 py-1 rounded-full mb-4">
+              Terapia &amp; Escuta
+            </span>
+            <h3 class="font-display text-xl font-bold text-spazzioNavy">Psicologia</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Espaço sigiloso e ético para trabalhar emoções, vínculos, rotina e desafios do dia a dia com apoio profissional.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Psicologia')"
+            class="mt-6 text-sm font-semibold text-spazzioBlue hover:text-spazzioNavy inline-flex items-center gap-1 cursor-pointer"
+          >
+            <span>Agendar Psicologia →</span>
+          </button>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-spazzioBlue/40 transition flex flex-col justify-between sm:col-span-2 lg:col-span-2">
+          <div>
+            <span class="inline-block text-xs font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full mb-4">
+              Atendimento Integrado
+            </span>
+            <h3 class="font-display text-xl font-bold text-spazzioNavy">Avaliação, Saúde &amp; Bem-Estar</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Triagem e orientação personalizada para indicar o melhor caminho de cuidado conforme a necessidade de cada paciente, com praticidade desde o primeiro contato.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="abrirModalAgendamento('Avaliação / Saúde e Bem-Estar')"
+            class="mt-6 text-sm font-semibold text-spazzioBlue hover:text-spazzioNavy inline-flex items-center gap-1 cursor-pointer"
+          >
+            <span>Falar sobre Avaliação →</span>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estrutura e Localização -->
+  <section id="estrutura" class="py-16 bg-white border-y border-slate-200/70">
+    <div id="localizacao" class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-spazzioGold">Onde Estamos</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-spazzioNavy">
+          Facilidade de acesso em Alagoinhas
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Ambiente tranquilo, organizado e preparado para receber você e sua família com conforto e pontualidade.
+        </p>
+
+        <div class="space-y-2.5 text-sm text-slate-700 pt-2">
+          <p><strong>Endereço:</strong> Rua Sussu Uyraçu Batista, nº 486 — Alagoinhas, BA</p>
+          <p><strong>WhatsApp direto:</strong> (75) 98155-3588</p>
+          <p><strong>Instagram:</strong> @spazziologos</p>
+        </div>
+
+        <div class="pt-3 flex flex-wrap gap-3">
+          <a
+            href="https://wa.me/5575981553588"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-spazzioBlue hover:bg-spazzioNavy text-white text-sm font-semibold px-5 py-3 rounded-xl transition"
+          >
+            Chamar no WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/spazziologos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold px-5 py-3 rounded-xl transition"
+          >
+            Ver Instagram Oficial
+          </a>
+        </div>
